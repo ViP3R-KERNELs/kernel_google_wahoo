@@ -670,6 +670,13 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, psabi)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, restrict)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, stringop-overflow)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, zero-length-bounds)
+KBUILD_CFLAGS   += $(call cc-disable-warning, array-compare)
+KBUILD_CFLAGS   += $(call cc-disable-warning, address)
+KBUILD_CFLAGS   += $(call cc-disable-warning, stringop-overread)
+KBUILD_CFLAGS   += $(call cc-disable-warning, misleading-indentation)
+KBUILD_CFLAGS   += $(call cc-disable-warning, enum-int-mismatch)
+KBUILD_CFLAGS   += $(call cc-disable-warning, format)
+KBUILD_CFLAGS   += $(call cc-disable-warning, array-perameter)
 
 ifdef CONFIG_LD_DEAD_CODE_DATA_ELIMINATION
 KBUILD_CFLAGS	+= $(call cc-option,-ffunction-sections,)
